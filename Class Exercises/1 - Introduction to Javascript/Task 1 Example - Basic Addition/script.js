@@ -10,6 +10,6 @@ function addNumbers() {
         document.getElementById('result').textContent = `The sum is: ${sum}`;
     }
 }
-
+ 
 // Event listener for the button click
 document.getElementById('addButton').addEventListener('click', addNumbers);
