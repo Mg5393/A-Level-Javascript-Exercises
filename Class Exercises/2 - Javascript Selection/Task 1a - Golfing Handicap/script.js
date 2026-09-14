@@ -9,9 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to calculate which league the player belongs to
 function calculateLeague() {
+   
+
     // TODO: Get the handicap value from the input field
     
+    let handicap = parseInt(document.getElementById('handicap').value);
+    if(handicap !=='' && ! isNaN(handicap)) {
     // TODO: Check if the handicap is less than 13
-    
-    // TODO: Display the appropriate message in the result paragraph
+    if (handicap < 13) {
+        // TODO: Display the appropriate message in the result paragraph
+        document.getElementById('result').textContent = "You belong to league 1.";
+    } else {
+        document.getElementById('result').textContent = "You belong to league 2.";
+    }
+}
+
 }
