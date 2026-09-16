@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to calculate the A-Level grade
 function calculateGrade() {
     // TODO: Get the marks for all four components
-    
+    let comp1 = parseInt(document.getElementById('comp1').value);
+    let comp2 = parseInt(document.getElementById('comp2').value);
+    let comp3 = parseInt(document.getElementById('comp3').value);
+    let comp4 = parseInt(document.getElementById('comp4').value);
     // TODO: Calculate the total marks
     
     // TODO: Calculate the percentage (total possible marks is 400)

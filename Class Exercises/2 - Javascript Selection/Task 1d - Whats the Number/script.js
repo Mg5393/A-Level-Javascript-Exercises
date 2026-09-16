@@ -13,7 +13,11 @@ function checkNumber() {
     let number = parseInt(document.getElementById('number').value);
     // TODO: Check if the number is positive, negative, or zero
     if (number < 0) {
-        document.getElementById('result').textContent = "Your number is negative"
-    } if 
+        document.getElementById('result').textContent = "Your number is negative";
+    } else if (number == 0){
+        document.getElementById('result').textContent = "Your number is Zero";
+    } else{
+        document.getElementById('result').textContent = "Your number is positive";
+    }
     // TODO: Display the appropriate message (POSITIVE, NEGATIVE, or ZERO)
 }
