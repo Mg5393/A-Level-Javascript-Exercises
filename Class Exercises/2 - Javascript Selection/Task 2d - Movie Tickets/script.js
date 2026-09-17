@@ -10,17 +10,28 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to calculate the total ticket cost
 function calculateTotal() {
     // TODO: Get values from all input fields
-    
+    let numAdults = parseInt(document.getElementById('numAdults').value);
+    let numChildren = parseInt(document.getElementById('numChildren').value);
+    let numSeniors = parseInt(document.getElementById('numSeniors').value);
+    let dayOfWeek = document.getElementById('dayOfWeek').value;
+    let timeOfDay = document.getElementById('timeOfDay').value;
     // TODO: Calculate base costs
+    let baseCost = (numAdults * 12.00) + (numChildren * 8.00) + (numSeniors * 7.50);
     // Adult: £12.00
     // Child: £8.00
     // Senior: £7.50
     
     // TODO: Apply day of week adjustments
+    if (dayOfWeek === 'Friday' || dayOfWeek === 'Saturday' || dayOfWeek === 'Sunday') {
+        baseCost += (numAdults + numChildren + numSeniors) * 2.50;
+    }
     // Friday-Sunday: +£2.50 per ticket
     
     // TODO: Apply time adjustments
     // Before 5 PM: -£1.50 per ticket
+    if (timeOfDay === 'before5pm') {
+        baseCost -= (numAdults + numChildren + numSeniors) * 1.50;
+    }
     
     // TODO: Calculate subtotal
     
